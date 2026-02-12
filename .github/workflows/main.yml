@@ -1,6 +1,7 @@
 name: Generate SBOM Report with Syft
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -29,3 +30,4 @@ jobs:
       with:
         name: sbom-report
         path: sbom.xml
+        path: spdx.json
